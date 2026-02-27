@@ -5,10 +5,10 @@ Full-stack Next.js application for managing daily meal sponsorships for Ustad wi
 ## Live Demo
 
 https://masjid-ustad-daily-food-sponsorship.vercel.app/
+## database run only in local
 
 ## Screenshots
 
-##database run only in local
 
 ### Home
 ![Home](docs/screenshots/home.png)
