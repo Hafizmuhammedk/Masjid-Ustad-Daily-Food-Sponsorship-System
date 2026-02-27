@@ -2,6 +2,10 @@
 
 Full-stack Next.js application for managing daily meal sponsorships for Ustad with meal-slot booking, admin controls, and user-side cancellation/payment options.
 
+## Live Demo
+
+https://masjid-ustad-daily-food-sponsorship.vercel.app/
+
 ## Screenshots
 
 ### Home
