@@ -8,6 +8,8 @@ https://masjid-ustad-daily-food-sponsorship.vercel.app/
 
 ## Screenshots
 
+##database run only in local
+
 ### Home
 ![Home](docs/screenshots/home.png)
 
