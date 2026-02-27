@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-a: rgba(46, 143, 90, 0.15);
+  --bg-b: rgba(16, 50, 36, 0.1);
+  --bg-c1: #eef7f1;
+  --bg-c2: #f8fbf9;
+  --bg-c3: #e7f2ec;
+}
+
+[data-theme="ocean"] {
+  --bg-a: rgba(30, 104, 156, 0.2);
+  --bg-b: rgba(10, 47, 74, 0.18);
+  --bg-c1: #eaf5ff;
+  --bg-c2: #f4fbff;
+  --bg-c3: #e5f1fb;
+}
+
+[data-theme="sand"] {
+  --bg-a: rgba(195, 145, 84, 0.18);
+  --bg-b: rgba(120, 84, 41, 0.15);
+  --bg-c1: #fff7ea;
+  --bg-c2: #fffcf5;
+  --bg-c3: #f6ebd8;
+}
+
+[data-theme="night"] {
+  --bg-a: rgba(92, 124, 255, 0.15);
+  --bg-b: rgba(21, 29, 56, 0.45);
+  --bg-c1: #111827;
+  --bg-c2: #0f172a;
+  --bg-c3: #1f2937;
+}
+
+body {
+  @apply text-mosque-900;
+  background:
+    radial-gradient(circle at 10% 10%, var(--bg-a), transparent 35%),
+    radial-gradient(circle at 90% 20%, var(--bg-b), transparent 30%),
+    linear-gradient(160deg, var(--bg-c1) 0%, var(--bg-c2) 45%, var(--bg-c3) 100%);
+  min-height: 100vh;
+  transition: background 280ms ease;
+}
+
+* {
+  box-sizing: border-box;
+}
