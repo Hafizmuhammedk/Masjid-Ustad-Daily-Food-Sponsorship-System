@@ -4,12 +4,13 @@ import { withDbWrite } from "@/lib/local-db";
 export const runtime = "nodejs";
 
 type Params = {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 };
 
 export async function DELETE(_request: Request, { params }: Params) {
   try {
-    const bookingId = Number(params.id);
+    const { id } = await params;
+    const bookingId = Number(id);
     if (!Number.isInteger(bookingId) || bookingId <= 0) {
       return NextResponse.json({ message: "Invalid booking id" }, { status: 400 });
     }
