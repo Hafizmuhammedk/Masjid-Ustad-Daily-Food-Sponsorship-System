@@ -1,3 +1,4 @@
+<<<<<<< ours
 .next
 node_modules
 .env
@@ -5,3 +6,9 @@ dist
 coverage
 *.log
 data/local-db.json
+=======
+__pycache__/
+*.pyc
+.env
+.venv/
+>>>>>>> theirs

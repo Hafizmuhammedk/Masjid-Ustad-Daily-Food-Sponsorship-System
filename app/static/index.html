@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Masjid Ustad Food Sponsorship</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Masjid Ustad Daily Food Sponsorship</h1>
+      <p>Register sponsors, book upcoming dates, and manage schedule.</p>
+    </header>
+
+    <main class="grid">
+      <section class="card">
+        <h2>1) Register Sponsor</h2>
+        <form id="sponsor-form">
+          <label>Full Name <input name="full_name" required maxlength="150" /></label>
+          <label>Phone <input name="phone" required maxlength="20" /></label>
+          <label>Email <input name="email" type="email" maxlength="150" /></label>
+          <button type="submit">Create Sponsor</button>
+        </form>
+      </section>
+
+      <section class="card">
+        <h2>2) Create Booking</h2>
+        <form id="booking-form">
+          <label>Sponsor ID <input name="sponsor_id" type="number" min="1" required /></label>
+          <label>Booking Date <input name="booking_date" type="date" required /></label>
+          <label>Food Note <textarea name="food_note" rows="2"></textarea></label>
+          <button type="submit">Create Booking</button>
+        </form>
+      </section>
+
+      <section class="card">
+        <h2>3) Monthly Schedule</h2>
+        <form id="schedule-form" class="inline">
+          <label>Month <input name="month" type="number" min="1" max="12" required /></label>
+          <label>Year <input name="year" type="number" min="1900" max="2100" required /></label>
+          <button type="submit">Fetch</button>
+        </form>
+        <div id="schedule-result"></div>
+      </section>
+
+      <section class="card">
+        <h2>4) Admin Login</h2>
+        <form id="login-form">
+          <label>Username <input name="username" required /></label>
+          <label>Password <input name="password" type="password" required /></label>
+          <button type="submit">Login</button>
+        </form>
+        <p class="token">Token: <span id="token-output">Not logged in</span></p>
+      </section>
+
+      <section class="card">
+        <h2>5) Cancel Booking (Admin)</h2>
+        <form id="cancel-form" class="inline">
+          <label>Booking ID <input name="booking_id" type="number" min="1" required /></label>
+          <button type="submit">Cancel</button>
+        </form>
+      </section>
+    </main>
+
+    <section class="card log-wrap">
+      <h2>Response Log</h2>
+      <pre id="log"></pre>
+    </section>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
