@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
-import ThemeSwitcher from "@/components/theme-switcher";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Masjid Ustad Daily Food Sponsorship",
@@ -10,8 +12,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className={inter.className}>
+      <body suppressHydrationWarning className="bg-slate-50 text-slate-800 antialiased selection:bg-emerald-200 selection:text-emerald-900">
         <Script id="strip-fdprocessedid" strategy="beforeInteractive">
           {`
             (function () {
@@ -30,7 +32,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             })();
           `}
         </Script>
-        <ThemeSwitcher />
         {children}
       </body>
     </html>
